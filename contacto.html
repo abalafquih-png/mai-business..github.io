@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MAI Business Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header / Menú de Navegación -->
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html">MAI <span>Business Lab</span></a>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="recursos.html">Plantillas & Excel</a></li>
+                <li><a href="academia.html">Cursos & Guías</a></li>
+                <li><a href="servicios.html">Trámites & Citas</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active btn-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Contenido Principal de Contacto -->
+    <main class="container">
+        <div class="section-header text-center">
+            <h2>¿En qué podemos ayudarte?</h2>
+            <p>Ponte en contacto con nosotros para resolver tus dudas sobre trámites, plantillas o servicios de asesoría.</p>
+        </div>
+
+        <div class="contact-box">
+            <form action="#" method="POST">
+                <div style="margin-bottom: 5px;">
+                    <label for="nombre" style="font-weight: 600; font-size: 14px; color: #334155;">Nombre Completo:</label>
+                </div>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellidos" required>
+
+                <div style="margin-top: 10px; margin-bottom: 5px;">
+                    <label for="email" style="font-weight: 600; font-size: 14px; color: #334155;">Correo Electrónico:</label>
+                </div>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+                <div style="margin-top: 10px; margin-bottom: 5px;">
+                    <label for="asunto" style="font-weight: 600; font-size: 14px; color: #334155;">Asunto (Trámite, Excel o Curso):</label>
+                </div>
+                <input type="text" id="asunto" name="asunto" placeholder="Ej: Consulta sobre Plantilla de IVA o Cita Extranjería" required>
+
+                <div style="margin-top: 10px; margin-bottom: 5px;">
+                    <label for="mensaje" style="font-weight: 600; font-size: 14px; color: #334155;">Mensaje:</label>
+                </div>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí los detalles de tu consulta..." required></textarea>
+
+                <button type="submit" class="btn-primary" style="margin-top: 15px; width: 100%;">Enviar Consulta</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MAI Business Lab. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+</body>
+</html>
