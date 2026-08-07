@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de Guías y PDFs - MAI Business Lab</title>
+    <meta name="description" content="Guías oficiales en PDF sobre citas y trámites de extranjería, reagrupación familiar y residencias.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .pdf-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .pdf-item {
+            background: var(--card);
+            border: 1px solid var(--line);
+            padding: 20px 22px;
+            border-radius: var(--radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .pdf-item:hover { box-shadow: var(--shadow-hover); border-color: var(--line-strong); }
+        .pdf-info h3 {
+            font-family: var(--font-display);
+            font-size: 16.5px;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 5px;
+        }
+        .pdf-info p { font-size: 13.5px; color: var(--text-muted); margin: 0; }
+        .btn-download {
+            background-color: var(--ink-2);
+            color: white;
+            padding: 10px 18px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+        .btn-download:hover { background-color: var(--ink); }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/mai_business_lab_logo.svg" alt="MAI Business Lab" class="logo-img">
+            </a>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="recursos.html">Plantillas &amp; Excel</a></li>
+                <li><a href="academia.html">Cursos &amp; Guías</a></li>
+                <li><a href="servicios.html">Trámites &amp; Citas</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></div>
+    </header>
+
+    <main class="container">
+        <div class="section-header text-center">
+            <span class="eyebrow">Repositorio</span>
+            <h2>Repositorio de Guías de Extranjería</h2>
+            <p>Escoge el documento oficial en PDF que te interesa consultar o descargar.</p>
+        </div>
+
+        <div class="pdf-list">
+            <div class="pdf-item">
+                <div class="pdf-info">
+                    <h3>Guía Integral de Trámites y Citas de Extranjería</h3>
+                    <p>Paso a paso para la obtención de cita previa y preparación de expedientes.</p>
+                </div>
+                <a href="descargas/citas-extranjeria.pdf" class="btn-download" download>Descargar PDF</a>
+            </div>
+            <div class="pdf-item">
+                <div class="pdf-info">
+                    <h3>Guía de Reagrupación Familiar y Residencias</h3>
+                    <p>Requisitos de IPREM, documentación y fases consulares detalladas.</p>
+                </div>
+                <a href="descargas/reagrupacion-familiar.pdf" class="btn-download" download>Descargar PDF</a>
+            </div>
+            <!-- AQUÍ PUEDES AÑADIR TUS NUEVOS PDFS EN EL FUTURO COPIANDO ESTE BLOQUE: -->
+            <!--
+            <div class="pdf-item">
+                <div class="pdf-info">
+                    <h3>Título de tu nuevo PDF</h3>
+                    <p>Descripción corta de lo que contiene el documento.</p>
+                </div>
+                <a href="descargas/nombre-de-tu-archivo.pdf" class="btn-download" download>Descargar PDF</a>
+            </div>
+            -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MAI Business Lab. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>
