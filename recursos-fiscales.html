@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de Guías Fiscales - MAI Business Lab</title>
+    <meta name="description" content="Guías y trámites oficiales sobre IRPF, IVA y Seguridad Social para autónomos.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .fiscal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .fiscal-item {
+            background: var(--card);
+            border: 1px solid var(--line);
+            padding: 20px 22px;
+            border-radius: var(--radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .fiscal-item:hover { box-shadow: var(--shadow-hover); border-color: var(--line-strong); }
+        .fiscal-info h3 {
+            font-family: var(--font-display);
+            font-size: 16.5px;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 5px;
+        }
+        .fiscal-info p { font-size: 13.5px; color: var(--text-muted); margin: 0; }
+        .btn-download-fiscal {
+            background-color: var(--gold-deep);
+            color: white;
+            padding: 10px 18px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+        .btn-download-fiscal:hover { background-color: #7C5F23; }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/mai_business_lab_logo.svg" alt="MAI Business Lab" class="logo-img">
+            </a>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="recursos.html">Plantillas &amp; Excel</a></li>
+                <li><a href="academia.html">Cursos &amp; Guías</a></li>
+                <li><a href="servicios.html">Trámites &amp; Citas</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></div>
+    </header>
+
+    <main class="container">
+        <div class="section-header text-center">
+            <span class="eyebrow">Repositorio</span>
+            <h2>Repositorio de Guías Fiscales y Trámites</h2>
+            <p>Selecciona la guía o impreso oficial que necesitas consultar o descargar.</p>
+        </div>
+
+        <div class="fiscal-list">
+            <div class="fiscal-item">
+                <div class="fiscal-info">
+                    <h3>Guía de Declaraciones Trimestrales: IRPF e IVA</h3>
+                    <p>Calendario del contribuyente, modelos clave y pautas para evitar sanciones con Hacienda.</p>
+                </div>
+                <a href="descargas/guia-irpf-iva.pdf" class="btn-download-fiscal" download>Descargar PDF</a>
+            </div>
+            <div class="fiscal-item">
+                <div class="fiscal-info">
+                    <h3>Claves y Trámites con la Seguridad Social para Autónomos</h3>
+                    <p>Altas, bajas, cotizaciones y gestión del RETA explicadas paso a paso.</p>
+                </div>
+                <a href="descargas/tramites-seguridad-social.pdf" class="btn-download-fiscal" download>Descargar PDF</a>
+            </div>
+            <!-- AQUÍ PUEDES AÑADIR MÁS DOCUMENTOS FISCALES EN EL FUTURO: -->
+            <!--
+            <div class="fiscal-item">
+                <div class="fiscal-info">
+                    <h3>Título de tu nueva guía fiscal</h3>
+                    <p>Breve descripción del documento.</p>
+                </div>
+                <a href="descargas/tu-archivo.pdf" class="btn-download-fiscal" download>Descargar PDF</a>
+            </div>
+            -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MAI Business Lab. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>
