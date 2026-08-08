@@ -1,0 +1,30 @@
+<svg width="1010" height="260" viewBox="0 0 1010 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9B865"/>
+      <stop offset="100%" stop-color="#B8923A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============ ICONO ============ -->
+  <g transform="translate(30,30)">
+    <rect x="0" y="0" width="200" height="200" rx="20" fill="#0B3D5C"/>
+    <rect x="42" y="118" width="26" height="56" rx="4" fill="#FFFFFF"/>
+    <rect x="87" y="90" width="26" height="84" rx="4" fill="url(#gold)"/>
+    <rect x="132" y="56" width="26" height="118" rx="4" fill="#FFFFFF"/>
+    <path d="M42 108 L100 78 L158 46" stroke="url(#gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="158" cy="46" r="9" fill="#FFFFFF"/>
+  </g>
+
+  <!-- ============ TEXTO ============ -->
+  <g transform="translate(272,0)">
+    <text x="0" y="118" font-family="Helvetica, Arial, sans-serif" font-size="80" font-weight="700" fill="#0B3D5C">MAI</text>
+    <text x="189" y="118" font-family="Helvetica, Arial, sans-serif" font-size="80" font-weight="300" fill="#0B3D5C">Business Lab</text>
+
+    <!-- Linea separadora dorada -->
+    <rect x="2" y="140" width="710" height="4" fill="url(#gold)"/>
+
+    <!-- Tagline -->
+    <text x="2" y="175" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="3" font-weight="500" fill="#5A6B77">ASESORÍA FISCAL · LABORAL · ADMINISTRATIVA</text>
+  </g>
+</svg>
