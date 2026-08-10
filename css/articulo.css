@@ -1,0 +1,248 @@
+/* ============================================================
+   MAI BUSINESS LAB — Extensión de estilos para artículos de blog
+   Se apoya en las variables y tokens definidos en style.css
+   ============================================================ */
+
+/* --- Migas de pan --- */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+}
+.breadcrumb a { color: var(--text-muted); transition: color 0.2s ease; }
+.breadcrumb a:hover { color: var(--gold-deep); }
+.breadcrumb span.sep { color: var(--line-strong); }
+.breadcrumb span.current { color: var(--ink); font-weight: 500; }
+
+/* --- Cabecera del artículo --- */
+.article-header { max-width: 780px; margin: 0 auto 48px; text-align: left; }
+
+.article-header h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+    line-height: 1.16;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+}
+
+.article-dek {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 62ch;
+    margin-bottom: 22px;
+}
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line-strong);
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+.article-meta strong { color: var(--ink); font-weight: 600; }
+
+/* --- Cuerpo del artículo --- */
+.article-body {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16.5px;
+    color: var(--text);
+}
+
+.article-body > p:first-of-type {
+    font-size: 18px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.55;
+    margin-bottom: 28px;
+}
+
+.article-body h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin: 46px 0 18px;
+    padding-top: 4px;
+}
+
+.article-body h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--ink);
+    margin: 30px 0 12px;
+}
+
+.article-body p { margin-bottom: 18px; line-height: 1.7; }
+
+.article-body ul, .article-body ol {
+    margin: 0 0 20px 0;
+    padding-left: 0;
+}
+.article-body ul li, .article-body ol li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.article-body ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--gold-deep);
+}
+.article-body ol { counter-reset: art-ol; }
+.article-body ol li { counter-increment: art-ol; }
+.article-body ol li::before {
+    content: counter(art-ol) ".";
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--gold-deep);
+}
+
+.article-body strong { color: var(--ink); font-weight: 600; }
+
+/* --- Tabla fiscal --- */
+.table-wrap { overflow-x: auto; margin: 8px 0 28px; border: 1px solid var(--line); border-radius: var(--radius); }
+.table-fiscal {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--card);
+}
+.table-fiscal th {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: left;
+    color: #fff;
+    background: var(--ink);
+    padding: 12px 16px;
+}
+.table-fiscal td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
+}
+.table-fiscal tr:last-child td { border-bottom: none; }
+.table-fiscal tr:nth-child(even) td { background: var(--paper-2); }
+
+/* --- Aviso / caja destacada --- */
+.callout {
+    background: var(--paper-2);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 18px 22px;
+    margin: 8px 0 28px;
+    font-size: 15px;
+    color: var(--text);
+}
+.callout strong { color: var(--ink); }
+
+/* --- Errores frecuentes --- */
+.error-list li::before { content: "✕"; color: #B4442E; font-size: 12px; top: 2px; }
+
+/* --- FAQ (acordeón nativo) --- */
+.faq-block { margin-top: 12px; }
+.faq-item {
+    border-bottom: 1px solid var(--line);
+}
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 2px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+    content: "+";
+    font-family: var(--font-mono);
+    font-size: 20px;
+    color: var(--gold-deep);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p {
+    padding-bottom: 18px;
+    color: var(--text-muted);
+    font-size: 15px;
+    max-width: 68ch;
+}
+
+/* --- CTA inline dentro del artículo --- */
+.article-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    background: var(--ink);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: 30px 34px;
+    margin: 44px 0;
+}
+.article-cta p { color: #C7D2D9; font-size: 14.5px; max-width: 50ch; margin: 0; }
+.article-cta .btn-primary { background: var(--gold); color: var(--ink); flex-shrink: 0; }
+.article-cta .btn-primary:hover { background: var(--gold-light); }
+
+/* --- Descarga PDF --- */
+.pdf-download {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin: 8px 0 36px;
+    background: var(--card);
+}
+.pdf-download .pdf-icon {
+    width: 42px; height: 42px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--paper-2); border-radius: var(--radius);
+    font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--gold-deep);
+}
+.pdf-download .pdf-text { flex: 1; }
+.pdf-download .pdf-text strong { display: block; font-size: 14.5px; color: var(--ink); }
+.pdf-download .pdf-text span { font-size: 12.5px; color: var(--text-muted); }
+.pdf-download a.btn-secondary { padding: 9px 18px; font-size: 13.5px; }
+
+/* --- Compartido / etiquetas de cierre --- */
+.article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 40px; }
+.article-tags span {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--text-muted);
+    background: var(--paper-2);
+    padding: 5px 12px;
+    border-radius: 999px;
+}
+
+@media (max-width: 720px) {
+    .article-cta { flex-direction: column; align-items: flex-start; text-align: left; }
+    .pdf-download { flex-wrap: wrap; }
+}
