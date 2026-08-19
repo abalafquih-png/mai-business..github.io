@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -82,9 +83,31 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 MAI Business Lab. Todos los derechos reservados.</p>
+        <p>&copy; 2026 MAI Business Lab. Todos los derechos reservados. ·
+        <a href="aviso-legal.html" style="color:#A9BBC5;">Aviso Legal</a> ·
+        <a href="politica-privacidad.html" style="color:#A9BBC5;">Privacidad</a> ·
+        <a href="politica-cookies.html" style="color:#A9BBC5;">Cookies</a></p>
     </footer>
 
+    <div id="cookie-banner" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:999;
+         background:var(--ink); color:#fff; padding:18px 24px; align-items:center; justify-content:center;
+         gap:20px; flex-wrap:wrap; box-shadow:0 -4px 16px rgba(0,0,0,0.18);">
+        <p style="margin:0; font-size:13.5px; color:#C7D2D9; max-width:640px; flex:1; min-width:240px;">
+            Usamos cookies propias y de terceros para analizar la navegación y, en los enlaces marcados
+            como de afiliación, para el seguimiento de referidos. Puedes aceptar, rechazar o leer más en
+            nuestra <a href="politica-cookies.html" style="color:#E4C77E; text-decoration:underline;">Política de Cookies</a>.
+        </p>
+        <div style="display:flex; gap:10px; flex-shrink:0;">
+            <button id="cookie-reject" style="background:transparent; color:#fff; border:1.5px solid #5C6B74;
+                padding:9px 18px; border-radius:4px; font-family:inherit; font-size:13.5px; font-weight:600;
+                cursor:pointer;">Rechazar</button>
+            <button id="cookie-accept" style="background:var(--gold); color:var(--ink); border:none;
+                padding:9px 18px; border-radius:4px; font-family:inherit; font-size:13.5px; font-weight:600;
+                cursor:pointer;">Aceptar</button>
+        </div>
+    </div>
+
     <script src="js/menu.js"></script>
+    <script src="js/cookie-consent.js"></script>
 </body>
 </html>
